@@ -1,13 +1,22 @@
-# DiscordGo
+<h1 align="center"> DiscordGo </h1> 
+<p align="center">
+  <a>
+    <img src="./img/logo.png" width="400">
+  </a>
+</p>
 
-![Version](https://img.shields.io/badge/Version-1.1-brightgreen)
 
-Discord C2 for Redteam....Need a better name.
+
+![Version](https://img.shields.io/badge/Version-2.0-brightgreen)
+![Language](https://img.shields.io/badge/Language-Go-blue.svg?longCache=true&style=flat-square) 
+
+
+Discord C2 for Redteam engagement....Need a better name.
 If you can think of one, please tell me. :)
 
 # Why I made this
 
-During Blue-Red Team competition, I needed an easy and fast way to keep connected.
+During Blue-Red Team competition, I needed an easy and fast way to keep connected and a way for mutiple redteamer to run commands, hence DiscordGo.
 Since Discord is getting popular, why not use the platorm as a c2.
 That's what this project is about.
 
@@ -22,14 +31,19 @@ When creating the bot, you need it give it some permission. For testing, I gave 
 * Send Messages
 * Read Messages
 * Attach Files
+* Manage Server
 
 # Usage
 
-Edit this file `pkg/util/constants/variables.go` with your token and ID.
+Edit this file `pkg/util/constants/variables.go` with your token and ID. Or create it if not there
 
 The bot token can be found on discord developer dashboard where you created the bot. To get your server ID, go to your server setting and click on `widget`. On the right pane, you see the your ID.
 
-By default, when you add your bot, it is added to the general text channel. If you want to use another text channel, right click on your desired channel and copy the channel ID. if you don't want a custom channel, ignore the `ChannelID` field.
+An example configuration file looks like this:
+```
+var ServerID = "XXXXXXXXXXXX"
+var BotToken = "XXXXXXXXXXX"
+```
 
 After that is done, all you have to do is run `make`. That will create 5 binaries.
 
@@ -44,24 +58,31 @@ After that is done, all you have to do is run `make`. That will create 5 binarie
 # Feature
 
 * Cross-platform
-* File upload
+* Organozer(talk about and intergration to pwnboard)
 
-# TODO
+
+# WIP (Work in Progress)
 
 - [x] Cross-platform
-- [x] File upload
-- [ ] Use mysql instead of local list for agents
+- [ ] File upload
 - [ ] File download
-- [ ] Agent grouping(by hostname like web hosts and so on)
+- [ ] Agent grouping(by hostname like web hosts and so on, slash command)
 - [ ] Group commands
-- [ ] Switch between cli mode and GUI(discord) mode
+- [ ] Integrate with pwndrop
 
 
-# Screenshots and Video
-Agent connected
-![CLI Mode](./img/cli.png "Command example")
-Agent response
-![Sample Command](./img/agent_cmd.png "Team list")
+
+# Screenshots
+<p align="center">
+  <a>
+    <img src="./img/example-team.png" width="860">
+  </a>
+</p>
+<p align="center">
+  <a>
+    <img src="./img/example-command.png" width="860">
+  </a>
+</p>
 
 
 # Disclamers
@@ -70,9 +91,7 @@ The author is in no way responsible for any illegal use of this software. It is 
 Every message on discord are saved on Discord's server, so be careful and not upload any sensitive or confidential documents.
 
 # Used Libraries
-* [disgord](https://github.com/bwmarrin/discordgo)
-* [CLI](https://github.com/chzyer/readline)
-* [Color](https://github.com/fatih/color)
+* [discordgo](https://github.com/bwmarrin/discordgo)
 
 
 Inspired by [SierrOne](https://github.com/berkgoksel/SierraOne)

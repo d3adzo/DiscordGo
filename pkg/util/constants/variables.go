@@ -1,5 +1,0 @@
-package constants
-
-var ServerID = "XXXXXXXXXXXXX"
-var BotToken = "XXXXXXXXXXXXX.XXXXXXXXXXXXX.XXXXXXXXXXXXX"
-var ChannelID = "XXXXXXXXXXXXX"
